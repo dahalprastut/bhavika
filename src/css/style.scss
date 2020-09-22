@@ -1,0 +1,671 @@
+
+
+
+// ----------------------------------
+//  ---- VARIABLE STARTS ---------
+// ---------------------------
+
+
+$primary-color:#21920F;
+$hover-color:yellow;
+$text-color:#2D2D2D;
+$text-secondary-color:#424242;
+$deal-color:#C15A5B;
+$deal-green-color:#5BC064;
+$category-color:#7CCFED;
+$category-secondary-color:#EDEDED;
+$featured-color:#FFC75A;
+$default-color:#fff;
+
+
+
+// ----------------------------------
+//  ---- VARIABLE ENDS ---------
+// ---------------------------
+
+
+
+
+// ---------------------------
+//  ----GLOBAL VARIABLE STARTS ---------
+// ---------------------------
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+@media(max-width:2000px){
+    html{
+        font-size: 62.5%;
+    }
+}
+
+@media(max-width:1366px){
+    html{
+        font-size: 56%;
+    }
+}
+
+@media(max-width:830px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media(max-width:660px){
+    html{
+        font-size: 47%;
+    }
+}
+
+@media(max-width:480px){
+    html{
+    
+        font-size: 44%;
+    }
+}
+
+
+
+// -------common starts --------------
+.top__right{
+    width:40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    >div{
+        margin-left: 1.5rem;
+        font-size: 1.8rem;
+
+        a{
+            color:$default-color;
+            text-decoration: none;
+
+            &:hover{
+                color:$hover-color;
+            }
+        }
+    }
+
+    >.divider{
+        border-right:0.1rem solid $default-color;
+        padding-right:1.5rem;
+    }
+
+}
+
+h4{
+    font-size: 2rem;
+    padding-top:2.5rem;
+    
+}
+
+
+// -------common ends --------------
+
+
+// ---------------------------------------------
+//--------------- header starts----------------
+// ---------------------------------------------
+
+// ------------------top starts -------------------
+
+.top__mobile--right{
+        display: none;
+}
+
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    background: $primary-color;
+    padding:1rem 2rem;
+
+    &__left{
+        width:60%;
+        display: flex;
+
+        
+
+        form{
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+            width:80%;
+            position: relative;
+
+            input{
+                width:100%;
+                border: 0;
+                border-radius: 1.4rem;
+                height: 5rem;
+                padding:0 5rem;
+                outline: 0;
+            }
+        }
+
+        &--searchicon, &--closeicon{
+            position: absolute;
+            left:2%;
+            top:38%;
+            font-size: 1.6rem;
+            color:$text-secondary-color;
+            font-weight: 400;
+        }
+
+        &--searchicon{
+            border-right:0.1rem solid $text-secondary-color;
+            padding-right:1rem;
+
+        }
+
+        &--closeicon{
+            left:auto;
+            right:2%;
+            color:$deal-color;
+
+        }
+        
+    }
+
+  
+}
+
+// -----------nav starst ------------
+
+nav{
+    // display: flex;
+    padding:1.5rem 2rem;
+
+    #nav-icon1{
+        display: none;
+    }
+
+    .wrapper{
+        display: flex;
+        width:100%;
+    }
+    .nav__left{
+        width:50%;
+    }
+
+    .nav__right{
+        width:50%;
+        display: flex;
+        justify-content: flex-end;
+
+        ul{
+            li:last-child{
+                margin-right:0;
+            }
+        }
+    }
+    ul{
+        display: flex;
+        li{
+            list-style: none;
+            margin-right: 2.5rem;
+            a{
+                color:$text-color;
+                text-decoration: none;
+                font-size: 1.8rem;
+                display: flex;
+                small{
+                    margin-right:0.5rem;
+                }
+                span{
+                    margin-left:0.5rem;
+                    padding-top:0.1rem;
+                }
+             
+            }
+
+        }
+
+        .divider{
+            border-right:0.1rem solid $text-secondary-color;
+            padding-right:1.5rem;
+        }
+
+    }
+}
+
+// *************************************
+// *********MEDIA QUERY START ********************************
+// *************************************
+
+@media(max-width:1000px){
+    nav{
+        padding-top:3rem;
+        #nav-icon1{
+            width: 4rem;
+            height: 4.5rem;
+            position: relative;
+            z-index: 600;
+            // margin: 50px auto;
+            color:$text-color;
+            display: block;
+            margin-left: 1rem;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            span{
+              display: block;
+              position: absolute;
+              height: 0.3rem;
+              width: 100%;
+              background: $text-color;
+              border-radius: 0.9rem;
+              opacity: 1;
+              left: 0;
+              -webkit-transform: rotate(0deg);
+              -moz-transform: rotate(0deg);
+              -o-transform: rotate(0deg);
+              transform: rotate(0deg);
+              -webkit-transition: 0.6s ease-in-out;
+              -moz-transition: 0.6s ease-in-out;
+              -o-transition: 0.6s ease-in-out;
+              transition: 0.6s ease-in-out;
+            }
+          }
+          
+          
+          #nav-icon1 span:nth-child(1) {
+            top: 0px;
+          }
+          
+          #nav-icon1 span:nth-child(2) {
+            top: 1rem;
+          }
+          
+          #nav-icon1 span:nth-child(3) {
+            top: 2rem;
+          }
+          
+          #nav-icon1.open span:nth-child(1) {
+            top: 1rem;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+          }
+          
+          #nav-icon1.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+          }
+          
+          #nav-icon1.open span:nth-child(3) {
+            top: 1rem;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+
+
+        .wrapper{
+            height:80vh;
+            position: absolute;
+            width:100%;
+            left:-200%;
+            z-index: 2000;
+            background: $default-color;
+            margin-top:2rem;
+        }
+
+        .nav__left{
+            padding-left:2rem;
+        }
+   
+
+
+        ul{
+            flex-direction: column;
+            height:100%;
+            li{
+                margin-top:3rem; 
+                a{
+                }
+            }
+
+            .divider{
+                border:0;
+            }
+        }
+    }
+}
+
+@media(max-width:660px){
+    .top{
+
+        &__left{
+            width:100%;
+
+            form{
+                width:90%;
+            }
+        }
+        &__right{
+            display: none;
+        }
+
+    }
+
+    .top__mobile--right{
+        display: flex;
+        padding:0 2rem;
+        width:100%;
+        padding-top:4rem;
+        background: $primary-color;
+    }
+}
+
+
+
+
+// *************************************
+// *********MEDIA QUERY ENDS ********************************
+// *************************************
+
+// -------------------------------------------------------------
+// ---------------------------header ends ------------------------------------
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// ---------------------------slider starts ------------------------------------
+// -------------------------------------------------------------
+
+.banner{
+    position: relative;
+    .owl-dots{
+        position: absolute;
+        bottom:10px;
+        left:50%;
+        z-index: 1000;
+    }
+}
+
+
+
+// -------------------------------------------------------------
+// ---------------------------slider ends ------------------------------------
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// ---------------------------category starts ------------------------------------
+// -------------------------------------------------------------
+
+.category{
+    padding:1rem 2rem;
+
+   
+
+    &__lists{
+        margin-top: 1.5rem;
+    }
+
+    &__row{
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        a{
+            width:31%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1.4rem;
+            overflow: hidden;
+            text-decoration: none;
+            color:$text-secondary-color;
+            .top--image{
+                background: $category-color;
+                height:15rem;
+                transition: 0.5s;
+                -webkit-transition: 0.5s;
+                img{
+                    width:100%;
+                    height:auto;
+                    object-fit: cover;
+                }
+            }
+
+            strong{
+                display: flex;
+                justify-content: center;
+                background: $category-secondary-color;
+                font-size: 1.6rem;
+                padding:1rem 0rem;
+            }
+
+            &:hover{
+                .top--image{
+                    background: $primary-color;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+// *************************************
+// *********MEDIA QUERY START ********************************
+// *************************************
+@media(max-width:480px){
+
+    .category{
+        &__row{
+            flex-direction: column;
+    
+            a{
+                width:100%;
+            }
+        }
+    }
+}
+
+
+// *************************************
+// *********MEDIA QUERY ENDS ********************************
+// *************************************
+
+
+
+// -------------------------------------------------------------
+// ---------------------------category ends ------------------------------------
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// ---------------------------brands starts ------------------------------------
+// -------------------------------------------------------------
+
+.brands{
+    padding:0 2rem;
+
+    &__slider--box{
+        margin-top: 4rem;
+    }
+
+    .item{
+        display: flex;
+
+        &__left{
+            width:26%;
+            background: $category-secondary-color;
+            border-radius: 1.4rem;
+        }
+        &__right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width:72%;
+            margin-left: 2rem;
+            h5{
+                font-size: 1.4rem;
+
+            }
+
+            span{
+                font-size: 1.3rem;
+                color:$text-secondary-color;
+            }
+        }
+    }
+}
+
+// -------------------------------------------------------------
+// ---------------------------brands ends ------------------------------------
+// -------------------------------------------------------------
+
+
+// -------------------------------------------------------------
+// ---------------------------featured starts ------------------------------------
+// -------------------------------------------------------------
+
+.featured{
+    .category__row{
+        a{
+            width:100%;
+            justify-content: flex-start;
+            .top--image{
+                background: $featured-color;
+                height:30rem;
+            }
+
+            strong{
+                padding:2rem 0;
+           
+            }
+
+            &:hover{
+                .top--image{
+                    background: $primary-color;
+                }
+            }
+        }
+
+    }
+}
+
+// -------------------------------------------------------------
+// ---------------------------featured ends ------------------------------------
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// ---------------------------deals start ------------------------------------
+// -------------------------------------------------------------
+
+.deals{
+    padding:0 2rem;
+
+    &__row{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+    &--item{
+        background:$category-color url('../images/vegies.png') right bottom no-repeat;
+        background-size: contain; 
+        width:45%;
+        border-radius: 1.4rem;
+        height: 30rem;
+        padding:4rem 0 0 2rem;
+
+    
+
+        h3{
+            font-size: 2.4rem;
+            color:$text-color;
+        }
+
+        span{
+            font-weight: 700;
+            margin-top: 0.6rem;
+            font-size: 1.8rem;
+            display: block;
+            color:$text-color;
+            
+        }
+
+        a{
+            background: $default-color;
+            display: inline-block;
+            padding:0 2rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 1.4rem;
+            text-decoration: none;
+            color:$text-color;
+            margin-top:2rem;
+            font-size: 1.4rem;
+
+            &:hover{
+                background: $category-secondary-color;
+            }
+        }
+
+    }
+
+    .red{
+        background:$deal-color url('../images/vegies.png') right bottom no-repeat;
+        background-size: contain; 
+        
+    }
+
+    .green{
+        background:$deal-green-color url('../images/vegies.png') right bottom no-repeat;
+        background-size: contain; 
+        
+    }
+
+    .yellow{
+        background:$featured-color url('../images/vegies.png') right bottom no-repeat;
+        background-size: contain; 
+        
+
+    }
+}
+
+// -------------------------------------------------------------
+// ---------------------------deals ends ------------------------------------
+// -------------------------------------------------------------
+
+
+// *************************************
+// *********MEDIA QUERY START ********************************
+// *************************************
+
+
+@media(max-width:660px){
+    .deals{
+        &__row{
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 0;
+        }
+        
+        &--item{
+            width:100%;
+            margin-top: 2rem;
+        }
+    }
+}
+
+// *************************************
+// *********MEDIA QUERY ENDS ********************************
+// *************************************
